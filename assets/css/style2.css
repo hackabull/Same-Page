@@ -1,6 +1,6 @@
-html, body {
+/* html, body {
     height: 100%;
-}
+} */
 body {
     overflow-x: hidden;
 }
@@ -239,7 +239,84 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 
+* { box-sizing: border-box; }
+
+/* inherit height from window */
+html, body { height: 100%; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+  height: 75%; /* inherit height from body */
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; }
+
+header.masthead2 {
+    text-align: center;
+    color: black;
+    background-color: grey;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    /* background-position: center center; */
+    background-size: cover;
+}
 
 
+/* * { box-sizing: border-box; }
 
+/* force scrollbar */
+html { overflow-y: scroll; }
 
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: white;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+} 
