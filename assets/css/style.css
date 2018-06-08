@@ -1,0 +1,271 @@
+html, body {
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* .indexPage,
+body {
+    overflow: hidden;
+} */
+
+section {
+    padding: 100px 0;
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    section {
+      padding: 150px 0;
+    }
+}
+
+#mainNav {
+    background-color: #212529;
+}
+
+#mainNav .navbar-brand {
+    color: white;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    color: white;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+      -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+      border: none;
+      background-color: transparent;
+    }
+    #mainNav .navbar-brand {
+      font-size: 1.75em;
+      /* -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s; */
+      transition: all 0.3s;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+      padding: 1.1em 1em !important;
+    }
+    #mainNav.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #212529;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.25em;
+      padding: 12px 0;
+    }
+}
+
+header.masthead {
+    text-align: center;
+    color: black;
+    background-color: grey;
+    background-image: url("../images/vadim-sherbakov-68-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+header.masthead .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+  
+header.masthead .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+#login-btn {
+    margin-top: 40px;
+}
+
+.btn {
+    /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    font-weight: 700;
+}
+  
+.btn-xl {
+    font-size: 18px;
+    padding: 20px 40px;
+}
+  
+.btn-primary {
+    background-color: #212529;
+    border-color: #212529;
+}
+  
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #666666!important;
+    border-color: #666666 !important;
+    color: white !important;
+}
+  
+.btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(90, 90, 90, 0.5) !important;
+}
+
+@media (min-width: 768px) {
+    header.masthead .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+    }
+    header.masthead,
+    .intro-text{
+      font-size: 40px;
+      font-style: italic;
+      line-height: 40px;
+      margin-bottom: 25px;
+      /* font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    }
+    header.masthead .intro-text .intro-heading {
+      font-size: 75px;
+      font-weight: 700;
+      line-height: 75px;
+      margin-bottom: 50px;
+      /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    }
+  }
+
+ul.social-buttons {
+    margin-bottom: 0 !important;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    color: white !important;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: grey;
+}
+
+#octocat {
+    font-size: 20px !important;
+}
+
+.service-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+
+section#login {
+    /* background-color: #212529; */
+    background-image: url("../images/hope-house-press-127593-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section#login .section-heading {
+    /* color: #fff; */
+}
+
+section#login .form-group {
+    /* margin-bottom: 25px; */
+}
+
+section#login .form-group input,
+section#login .form-group textarea {
+    padding: 10px;
+}
+
+section#login .form-group input.form-control {
+    /* height: auto; */
+}
+
+section#login .form-group textarea.form-control {
+    /* height: 248px; */
+}
+
+section#login .form-control:focus {
+    border-color: #212529;
+    box-shadow: none;
+}
+
+section#login ::-webkit-input-placeholder {
+    color: #ced4da;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+    bottom: 0;
+}
+
+ul.social-buttons {
+    margin-bottom: 0 !important;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    color: white !important;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: grey;
+}
+
+#mast, #login {
+    height: 100%;
+}
+
+
+
+
+
+
