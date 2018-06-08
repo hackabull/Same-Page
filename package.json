@@ -1,0 +1,26 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "# Project Name: TBD This app is aimed at blended families (2 households, where kids move back and forth between parents or guardians), but could probably be used by any group of people trying to buy groceries together, keep a calendar, and have a shared to do list. We're envisioning 5 pages:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackabull/project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackabull/project-2/issues"
+  },
+  "homepage": "https://github.com/hackabull/project-2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
