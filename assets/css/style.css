@@ -109,6 +109,7 @@ header.masthead .intro-text .intro-heading {
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
+    color: white;
 }
 
 #login-btn {
@@ -161,6 +162,31 @@ header.masthead .intro-text .intro-heading {
       /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     }
   }
+
+ul.social-buttons {
+    margin-bottom: 0 !important;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    color: white !important;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: grey;
+}
+
+#octocat {
+    font-size: 20px !important;
+}
 
 .service-heading {
     margin: 15px 0;

@@ -1,6 +1,7 @@
-/* html, body {
+html, body {
     height: 100%;
-} */
+}
+
 body {
     overflow-x: hidden;
 }
@@ -26,15 +27,17 @@ section h2.section-heading {
     }
 }
 
-#mainNav {
-    background-color: #212529;
+#mainNav2 {
+    background-color: #212529 !important;
+    position: relative;
+    padding: 0px !important;
 }
 
-#mainNav .navbar-brand {
+#mainNav2 .navbar-brand {
     color: white;
 }
 
-#mainNav .navbar-toggler {
+#mainNav2 .navbar-toggler {
     font-size: 12px;
     right: 0;
     padding: 13px;
@@ -43,7 +46,7 @@ section h2.section-heading {
     border: 0;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav2 .navbar-nav .nav-item .nav-link {
     font-size: 90%;
     font-weight: 400;
     padding: 0.75em 0;
@@ -52,7 +55,7 @@ section h2.section-heading {
 }
 
 @media (min-width: 992px) {
-    #mainNav {
+    #mainNav2 {
       padding-top: 25px;
       padding-bottom: 25px;
       -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -61,91 +64,62 @@ section h2.section-heading {
       border: none;
       background-color: transparent;
     }
-    #mainNav .navbar-brand {
+    #mainNav2 .navbar-brand {
       font-size: 1.75em;
       /* -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s; */
       transition: all 0.3s;
     }
-    #mainNav .navbar-nav .nav-item .nav-link {
+    #mainNav2 .navbar-nav .nav-item .nav-link {
       padding: 1.1em 1em !important;
     }
-    #mainNav.navbar-shrink {
+    #mainNav2.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
       background-color: #212529;
     }
-    #mainNav.navbar-shrink .navbar-brand {
+    #mainNav2.navbar-shrink .navbar-brand {
       font-size: 1.25em;
       padding: 12px 0;
     }
 }
 
-header.masthead {
+header.masthead2 {
     text-align: center;
     color: black;
-    background-color: grey;
-    background-image: url("../images/vadim-sherbakov-68-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+    /* background-color: grey; */
+    /* background-image: url("../images/vadim-sherbakov-68-unsplash.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    /* background-position: center center; */
+    /* background-size: cover; */
 }
 
-header.masthead .intro-text {
+header.masthead2 .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
 }
 
-header.masthead .intro-text .intro-lead-in {
+header.masthead2 .intro-text .intro-lead-in {
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
     margin-bottom: 25px;
 }
   
-header.masthead .intro-text .intro-heading {
+header.masthead2 .intro-text .intro-heading {
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
 }
 
-#login-btn {
-    margin-top: 40px;
-}
-
-.btn {
-    /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
-    font-weight: 700;
-}
-  
-.btn-xl {
-    font-size: 18px;
-    padding: 20px 40px;
-}
-  
-.btn-primary {
-    background-color: #212529;
-    border-color: #212529;
-}
-  
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #666666!important;
-    border-color: #666666 !important;
-    color: white !important;
-}
-  
-.btn-primary:active, .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(90, 90, 90, 0.5) !important;
-}
-
-@media (min-width: 768px) {
-    header.masthead .intro-text {
+  @media (min-width: 768px) {
+    header.masthead2 .intro-text {
       padding-top: 300px;
       padding-bottom: 200px;
     }
-    header.masthead,
+    header.masthead2,
     .intro-text{
       font-size: 40px;
       font-style: italic;
@@ -153,7 +127,7 @@ header.masthead .intro-text .intro-heading {
       margin-bottom: 25px;
       /* font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     }
-    header.masthead .intro-text .intro-heading {
+    header.masthead2 .intro-text .intro-heading {
       font-size: 75px;
       font-weight: 700;
       line-height: 75px;
@@ -162,47 +136,10 @@ header.masthead .intro-text .intro-heading {
     }
   }
 
-.service-heading {
+/* .service-heading {
     margin: 15px 0;
     text-transform: none;
-}
-
-section#login {
-    /* background-color: #212529; */
-    background-image: url("../images/hope-house-press-127593-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-section#login .section-heading {
-    /* color: #fff; */
-}
-
-section#login .form-group {
-    /* margin-bottom: 25px; */
-}
-
-section#login .form-group input,
-section#login .form-group textarea {
-    padding: 10px;
-}
-
-section#login .form-group input.form-control {
-    /* height: auto; */
-}
-
-section#login .form-group textarea.form-control {
-    /* height: 248px; */
-}
-
-section#login .form-control:focus {
-    border-color: #212529;
-    box-shadow: none;
-}
-
-section#login ::-webkit-input-placeholder {
-    color: #ced4da;
-}
+} */
 
 footer {
     padding: 25px 0;
@@ -234,58 +171,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     background-color: grey;
 }
 
-#mast, #login {
-    height: 100%;
+#octocat {
+    font-size: 17px !important;
 }
+
+/* #mast, #login {
+    height: 100%;
+} */
 
 
 * { box-sizing: border-box; }
-
-/* inherit height from window */
-html, body { height: 100%; }
-
-body { font-family: sans-serif; }
-
-/* ---- grid ---- */
-
-.grid {
-  background: #DDD;
-  height: 75%; /* inherit height from body */
-}
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-item {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: #0D8;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.7);
-}
-
-.grid-item--width2 { width: 200px; }
-.grid-item--height2 { height: 200px; }
-
-header.masthead2 {
-    text-align: center;
-    color: black;
-    background-color: grey;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: scroll; */
-    /* background-position: center center; */
-    background-size: cover;
-}
-
-
-/* * { box-sizing: border-box; }
 
 /* force scrollbar */
 html { overflow-y: scroll; }
@@ -296,6 +191,7 @@ body { font-family: sans-serif; }
 
 .grid {
   background: white;
+  margin: 100px;
 }
 
 /* clear fix */
@@ -309,14 +205,19 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 50%;
+  height: 50%;
 }
 
 .grid-item {
-  float: left;
+  float: left !important;
 }
 
 .grid-item img {
   display: block;
   width: 100%;
-} 
+  padding: 5px;
+}
+
+.grid-item--width2 { width: 400px; }
+.grid-item--height2 { height: 400px; }
