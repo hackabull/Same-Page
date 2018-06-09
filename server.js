@@ -27,8 +27,12 @@ app.use(bodyParser.json());
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routing/apiRoutes")
-require("./routing/htmlRoutes")
+var routes =  
+require("./controllers/food_list_controller.js");
+require("./controllers/what_to_bring_controller.js");
+
+
+// Set Handlebars.
 
 // =============================================================================
 // LISTENER
