@@ -5,8 +5,6 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
-
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -29,17 +27,13 @@ app.use(bodyParser.json());
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routing/apiRoutes")
-require("./routing/htmlRoutes")
+var routes =  
 require("./controllers/food_list_controller.js");
 require("./controllers/what_to_bring_controller.js");
 
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars")
 // =============================================================================
 // LISTENER
 // The below code effectively "starts" our server
