@@ -1,0 +1,223 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* .indexPage,
+body {
+    overflow: hidden;
+} */
+
+section {
+    padding: 100px 0;
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    section {
+      padding: 150px 0;
+    }
+}
+
+#mainNav2 {
+    background-color: #212529 !important;
+    position: relative;
+    padding: 0px !important;
+}
+
+#mainNav2 .navbar-brand {
+    color: white;
+}
+
+#mainNav2 .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+}
+
+#mainNav2 .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    color: white;
+}
+
+@media (min-width: 992px) {
+    #mainNav2 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+      -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+      border: none;
+      background-color: transparent;
+    }
+    #mainNav2 .navbar-brand {
+      font-size: 1.75em;
+      /* -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s; */
+      transition: all 0.3s;
+    }
+    #mainNav2 .navbar-nav .nav-item .nav-link {
+      padding: 1.1em 1em !important;
+    }
+    #mainNav2.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #212529;
+    }
+    #mainNav2.navbar-shrink .navbar-brand {
+      font-size: 1.25em;
+      padding: 12px 0;
+    }
+}
+
+header.masthead2 {
+    text-align: center;
+    color: black;
+    /* background-color: grey; */
+    /* background-image: url("../images/vadim-sherbakov-68-unsplash.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    /* background-position: center center; */
+    /* background-size: cover; */
+}
+
+header.masthead2 .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+header.masthead2 .intro-text .intro-lead-in {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+  
+header.masthead2 .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+  @media (min-width: 768px) {
+    header.masthead2 .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+    }
+    header.masthead2,
+    .intro-text{
+      font-size: 40px;
+      font-style: italic;
+      line-height: 40px;
+      margin-bottom: 25px;
+      /* font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    }
+    header.masthead2 .intro-text .intro-heading {
+      font-size: 75px;
+      font-weight: 700;
+      line-height: 75px;
+      margin-bottom: 50px;
+      /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    }
+  }
+
+/* .service-heading {
+    margin: 15px 0;
+    text-transform: none;
+} */
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+    bottom: 0;
+}
+
+ul.social-buttons {
+    margin-bottom: 0 !important;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    color: white !important;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: grey;
+}
+
+#octocat {
+    font-size: 17px !important;
+}
+
+/* #mast, #login {
+    height: 100%;
+} */
+
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: white;
+  margin: 100px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 50%;
+  height: 50%;
+}
+
+.grid-item {
+  float: left !important;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+.grid-item--width2 { width: 400px; }
+.grid-item--height2 { height: 400px; }
