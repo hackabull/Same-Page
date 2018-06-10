@@ -9,7 +9,7 @@
   host: "localhost",
   user: "root",
   port : 3333,
-  database: "tobringlist_db"
+  database: "tobringlist_db" 
 });
 
 // Make connection.

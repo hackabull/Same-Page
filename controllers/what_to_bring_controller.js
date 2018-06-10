@@ -1,5 +1,6 @@
-
-
+var express = require("express");
+var dblogic = express.dblogic();
+var connection = require("../config/connection.js");
 // CRUD TEMPLATE FROM ICECREAM NOT DONE YET 
 
 function createProduct() {
@@ -69,3 +70,5 @@ function readProducts() {
     connection.end();
   });
 }
+
+module.exports = dblogic;

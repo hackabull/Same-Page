@@ -1,4 +1,5 @@
 body {
+    background-color: #2b333b;
     margin: 0;
     min-width: 250px;
   }
@@ -43,7 +44,7 @@ body {
   
   /* When clicked on, add a background color and strike out text */
   ul li.checked {
-    background: #888;
+    background: rgba(27, 24, 24, 0.726);
     color: #fff;
     text-decoration: line-through;
   }
@@ -52,7 +53,7 @@ body {
   ul li.checked::before {
     content: '';
     position: absolute;
-    border-color: #fff;
+    border-color: #1ea0eb;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
@@ -71,15 +72,16 @@ body {
   }
   
   .close:hover {
-    background-color: #f44336;
+    background-color:  #212529;
     color: white;
   }
   
   /* Style the header */
   .header {
-    background-color: #f44336;
+    background-color:  #2b333b;
     padding: 30px 40px;
     color: white;
+    font-weight: bold;
     text-align: center;
   }
   
@@ -96,23 +98,25 @@ body {
     width: 75%;
     padding: 10px;
     float: left;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   /* Style the "Add" button */
   .addBtn {
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
-    color: #555;
+    background: #1ea0eb;
+    color: rgba(27, 24, 24, 0.726);
     float: left;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .addBtn:hover {
-    background-color: #bbb;
+    background-color: rgba(27, 24, 24, 0.726);
+    color: white
   }
  
