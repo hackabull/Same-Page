@@ -22,9 +22,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-
-
-
 app.get("/", function(req, res) {
   // res.send("Welcome to the Star Wars Page!")
   res.sendFile(path.join(__dirname, "index.html"));
@@ -38,13 +35,8 @@ app.get("/", function(req, res) {
 // ================================================================================
 
 
-
-
-
-var routes =  
-require("./controllers/food_list_controller.js");
+require("./config/connection.js"); 
 require("./controllers/what_to_bring_controller.js");
-
 
 // Set Handlebars.
 
