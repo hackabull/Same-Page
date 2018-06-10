@@ -5,6 +5,8 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path"); 
+var serveStatic = require('serve-static')
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -21,14 +23,34 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('*/css',express.static('assets/css'));
+app.use('*/js',express.static('assets/js'));
+app.use('*/images',express.static('assets/images'));
+
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/tobringlist", function(req, res) {
+  res.sendFile(path.join(__dirname, "tobringlist.html"));
+});
+
+app.get("/dashboard", function(req, res) {
+  res.sendFile(path.join(__dirname, "dashboard.html"));
+});
+
+app.get("/calendar", function(req, res) {
+  res.sendFile(path.join(__dirname, "calendar/list-views.html"));
+});
+
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routing/apiRoutes")
-require("./routing/htmlRoutes")
+require("./config/connection.js"); 
 
 // =============================================================================
 // LISTENER

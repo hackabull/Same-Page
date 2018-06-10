@@ -1,8 +1,7 @@
-# project-2
-###_Team Hack-A-Bull: Tim, Anthony, Emily, & Allison_
+# Same Page
+###_Team Hack-A-Bull: 4 folks learning to code from Durham, NC_
 
-# Project Name: TBD
-This app is aimed at blended families (2 households, where kids move back and forth between parents or guardians), but could probably be used by any group of people trying to buy groceries together, keep a calendar, and have a shared to do list. We're envisioning 5 pages: 
+This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to buy groceries together, keep a calendar, and have a shared to do list. We've got 3 pages so far with dreams of more to follow: 
 
 **1) Main Welcome Page**
 sign-in page? separate out what kids have access to vs. what parents have access to
@@ -14,29 +13,19 @@ tech to look into/possibly use: Google Calendar API
 **3) What-To-Bring** a reminder list for each child as they leave the one house and head to the other house
 tech to look into/possibly use: Cats/Burger hw
 
-**4) Virtual wallet** an ongoing record of who pays for what
+Future iterations of this app might include: 
+
+**4) A Virtual Wallet** an ongoing record of who pays for what
 tech to look into/possibly use: Sequelize
 
 **5) Food list/Meal Planner/Grocery Planner**
 Meal Planner that carries over to grocery planner
 tech to look into/possibly use: Yummly API
 
-_goals for future (but not neccessarily taking on with this iteration of project):
-money mover
-child-locator_
+**6) Child-Locator**
+See where your children are at any time via their phones.
 
-# Responsibilities
+# How to use _Same Page_
+visit deployed heroku site
 
-**Emily** Front-End Lead (not that we don't all do front-end but we defer to her front-end wireframe and styling)
 
-Materialize & Isotope
-
-**Anthony** Back-End Lead (not that Emily doesn't do any back end stuff, she is touching the code for the back-end)
-
-**Allison** Calendar
-
-**Tim & Anthony** Food List & Wallet
-
-_Do what to bring first b/c we have the code for that already_
-
-_Break own into MVP, minimum viable product & do that_
