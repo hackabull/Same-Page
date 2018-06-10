@@ -44,13 +44,17 @@ app.get("/calendar", function(req, res) {
   res.sendFile(path.join(__dirname, "calendar/list-views.html"));
 });
 
+app.get("/messaging", function(req, res) {
+  res.sendFile(path.join(__dirname, "messaging.html"));
+});
+
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./config/connection.js"); 
+ require("./config/connection.js"); 
 
 // =============================================================================
 // LISTENER

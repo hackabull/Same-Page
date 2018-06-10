@@ -5,6 +5,8 @@
   connection = mysql.createConnection(process.env.JAWSDB_URL)
   } else {
 
+    // ADD LOCAL CREDENTIALS FOR TESTING On your own 
+
  connection = mysql.createConnection({
   host: "localhost",
   user: "root",
