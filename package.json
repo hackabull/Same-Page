@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hackabull/project-2#readme",
   "dependencies": {
-    "isotope-masonry-horizontal": "^2.0.1"
+    "isotope-masonry-horizontal": "^2.0.1",
+    "isotope-packery": "^2.0.1"
   }
 }
