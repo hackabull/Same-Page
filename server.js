@@ -40,6 +40,10 @@ app.get("/dashboard", function(req, res) {
   res.sendFile(path.join(__dirname, "dashboard.html"));
 });
 
+app.get("/calendar", function(req, res) {
+  res.sendFile(path.join(__dirname, "calendar/list-views.html"));
+});
+
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
