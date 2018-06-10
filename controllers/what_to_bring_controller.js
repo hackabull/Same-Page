@@ -1,51 +1,71 @@
-var express = require("express");
-
-var router = express.Router();
-
-// Import the model (cat.js) to use its database functions.
-var bringlistEntry = require("../models/bringlistEntry.js");
 
 
-router.post("/api/bringlist", function(req, res) {
-    bringlistEntry.create([
-    "name", "brought"
-  ], [
-    req.body.name, req.body.brought
-  ], function(result) {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
-  });
-});
+// CRUD TEMPLATE FROM ICECREAM NOT DONE YET 
 
-router.put("/api/bringlist/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-
-  console.log("condition", condition);
-
-  bringlistEntry.update({
-    brought: req.body.brought
-  }, condition, function(result) {
-    if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
+function createProduct() {
+  console.log("Inserting a new product...\n");
+  var query = connection.query(
+    "INSERT INTO products SET ?",
+    {
+      flavor: "Rocky Road",
+      price: 3.0,
+      quantity: 50
+    },
+    function(err, res) {
+      console.log(res.affectedRows + " product inserted!\n");
+      // Call updateProduct AFTER the INSERT completes
+      updateProduct();
     }
-  });
-});
+  );
 
-router.delete("/api/bringlist/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  // logs the actual query being run
+  console.log(query.sql);
+}
 
-  bringlistEntry.delete(condition, function(result) {
-    if (result.affectedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
+function updateProduct() {
+  console.log("Updating all Rocky Road quantities...\n");
+  var query = connection.query(
+    "UPDATE products SET ? WHERE ?",
+    [
+      {
+        quantity: 100
+      },
+      {
+        flavor: "Rocky Road"
+      }
+    ],
+    function(err, res) {
+      console.log(res.affectedRows + " products updated!\n");
+      // Call deleteProduct AFTER the UPDATE completes
+      deleteProduct();
     }
-  });
-});
+  );
 
-// Export routes for server.js to use.
-module.exports = router;
+  // logs the actual query being run
+  console.log(query.sql);
+}
+
+function deleteProduct() {
+  console.log("Deleting all strawberry icecream...\n");
+  connection.query(
+    "DELETE FROM products WHERE ?",
+    {
+      flavor: "strawberry"
+    },
+    function(err, res) {
+      console.log(res.affectedRows + " products deleted!\n");
+      // Call readProducts AFTER the DELETE completes
+      readProducts();
+    }
+  );
+}
+
+function readProducts() {
+  console.log("Selecting all products...\n");
+  connection.query("SELECT * FROM products", function(err, res) {
+    if (err) throw err;
+    // Log all results of the SELECT statement
+    console.log(res);
+    connection.end();
+  });
+}

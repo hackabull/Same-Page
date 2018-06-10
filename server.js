@@ -6,6 +6,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path"); 
+var serveStatic = require('serve-static')
+
 // ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
@@ -21,12 +23,22 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('*/css',express.static('assets/css'));
+app.use('*/js',express.static('assets/js'));
+app.use('*/images',express.static('assets/images'));
+
 
 app.get("/", function(req, res) {
-  // res.send("Welcome to the Star Wars Page!")
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/tobringlist", function(req, res) {
+  res.sendFile(path.join(__dirname, "tobringlist.html"));
+});
+
+app.get("/dashboard", function(req, res) {
+  res.sendFile(path.join(__dirname, "dashboard.html"));
+});
 
 // ================================================================================
 // ROUTER
@@ -34,11 +46,7 @@ app.get("/", function(req, res) {
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-
 require("./config/connection.js"); 
-require("./controllers/what_to_bring_controller.js");
-
-// Set Handlebars.
 
 // =============================================================================
 // LISTENER
