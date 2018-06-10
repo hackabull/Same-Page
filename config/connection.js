@@ -9,7 +9,8 @@
   host: "localhost",
   user: "root",
   port : 3306,
-  database: "k3kgmp6y1wyvyq3t" 
+  password: 'lavieenrose919',
+  database: "tobringlist_db" 
 });
 
 // Make connection.
