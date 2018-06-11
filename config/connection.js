@@ -5,14 +5,12 @@
   connection = mysql.createConnection(process.env.JAWSDB_URL)
   } else {
 
-    // ADD LOCAL CREDENTIALS FOR TESTING On your own 
-
+// Add your local configuration for testing purposes
  connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   port : 3306,
-  password: 'lavieenrose919',
-  database: "tobringlist_db" 
+  database: "samepage_db"
 });
 
 // Make connection.
@@ -24,6 +22,6 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 };
+
 // Export connection for our ORM to use.
- 
 module.exports = connection;

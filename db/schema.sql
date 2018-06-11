@@ -1,16 +1,6 @@
-DROP DATABASE k3kgmp6y1wyvyq3t;
-CREATE DATABASE k3kgmp6y1wyvyq3t;
-use k3kgmp6y1wyvyq3t; 
-
-CREATE TABLE `parentmessages` (
-  `id` Int( 11 ) AUTO_INCREMENT NOT NULL,
-  `author` VARCHAR( 255) NOT NULL,
-  `body` VARCHAR( 255 ) NOT NULL,
-  `created_at` DATETIME NOT NULL,
-
-  PRIMARY KEY ( `id` ) 
-);
-
+DROP DATABASE samepage_db;
+CREATE DATABASE samepage_db;
+use samepage_db; 
 
 
 CREATE TABLE UserInfo
@@ -39,5 +29,15 @@ CREATE TABLE calendar
 	date varchar(100) NOT NULL,
 	time varchar(100) NOT NULL,
 	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE parentmessages (
+id Int(11) AUTO_INCREMENT NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  body VARCHAR(255) NOT NULL,
+  created_at DATETIME NOT NULL,
+
+  PRIMARY KEY (id) 
 );
 
