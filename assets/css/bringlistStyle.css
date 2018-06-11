@@ -1,4 +1,5 @@
 
+h2
 * {
   box-sizing: border-box;
 }
@@ -46,7 +47,7 @@ ul li.checked {
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: #fff;
+  border-color: rgb(10, 9, 9);
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -71,7 +72,8 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+    background-color: #212529;
+  
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -95,10 +97,13 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
+position: relative;
+left: 3%; 
   padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
+  width: 10%;
+  background: #3498db;
+  color: rgb(245, 233, 233);
+  font-weight: bold;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -108,4 +113,33 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+.clearBtn {
+  position: relative;
+   left: 3%;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.clearBtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
