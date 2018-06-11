@@ -39,7 +39,28 @@
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'month,agendaWeek,agendaDay'
+          right: 'addEventButton,month,agendaWeek,agendaDay'
+        },
+        customButtons: {
+          addEventButton: {
+            text: 'add event...',
+            click: function () {
+              var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+              var date = moment(dateStr);
+              var titleStr = prompt('Enter the title of the Event');
+
+              if (date.isValid()) {
+                $('#calendar').fullCalendar('renderEvent', {
+                  title: titleStr,
+                  start: date,
+                  allDay: true
+                });
+                alert('Great. You have added an event');
+              } else {
+                alert('Invalid date.');
+              }
+            }
+          }
         },
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
@@ -74,12 +95,7 @@
       });
     });
 
-    $("#add-btn").on("click", function (event) {
-      event.preventDefault();
-      var newAppointment = {
-        title: $("#title").val().trim(),
-      };
-    });
+
   </script>
   <style>
     body {
@@ -133,7 +149,6 @@
     .form-control {
       width: 95%;
     }
-
   </style>
 </head>
 
@@ -151,26 +166,12 @@
         <input type='checkbox' id='drop-remove' />
         <label for='drop-remove'>remove after drop</label>
       </p>
-      <div class="panel-body">
-        <form method="POST" role="form">
-
-          <div class="form-group">
-            <label for="Title">Title</label>
-            <input type="text" class="form-control" id="Title">
-          </div>
-        </form>
-      </br>
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-            <span class="fa fa-fire"></span> Add a Family Event</button>
-        </div>
-      </div>
-</div>
-      <div id='calendar'></div>
-
-      <div style='clear:both'></div>
-
     </div>
+    <div id='calendar'></div>
+
+    <div style='clear:both'></div>
+
+  </div>
 </body>
 
 </html>
