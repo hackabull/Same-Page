@@ -42,14 +42,22 @@
     });
 
     // init Masonry
-    var $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        columnWidth: '.grid-sizer'
-    });
+    // var $grid = $('.grid').masonry({
+    //     itemSelector: '.grid-item',
+    //     percentPosition: true,
+    //     columnWidth: '.grid-sizer'
+    // });
     // layout Masonry after each image loads
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry();
-    });
+    // $grid.imagesLoaded().progress(function () {
+    //     $grid.masonry();
+    // });
+
+    $('.grid').isotope({
+        layoutMode: 'packery',
+        itemSelector: '.grid-item',
+        packery: {
+          gutter: 20
+        }
+      });
 
 })(jQuery);
