@@ -9,8 +9,8 @@
   host: "localhost",
   user: "root",
   port : 3306,
-  password: "***REMOVED***",
-  database: "users_db" 
+  password: "",
+  database: "" 
 });
 
 // Make connection.
