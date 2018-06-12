@@ -74,7 +74,7 @@
                     <span class="intro-heading text-uppercase">Welcome!
                     </span>
                 </div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="login-btn" href="#services">Login</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="login-btn" href="#loginRegister">Login</a>
                 </section>
             </div>
         </div>
@@ -90,25 +90,25 @@
                     <h2 class="section-heading text-uppercase">Register</h2>
                 </div>
             </div>
-            <form action="https://formspree.io/ejreed1229@gmail.com" method="POST">
+            <form action="/api/login" method="POST">
                 <div class="row">
                     <div class="col-lg-6" style="border-right: 1px solid grey; padding-right: 50px;">
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="name" type="text" name="name" placeholder="Your Username *" required="required" data-validation-required-message="Please enter your username.">
+                                        <input class="form-control" id="email" type="text" name="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="password" type="password" name="_replyto" placeholder="Your Password *" required="required"
+                                        <input class="form-control" id="password" type="password" name="password" placeholder="Your Password *" required="required"
                                             data-validation-required-message="Please enter your email address.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="checkbox">
                                             <label>
@@ -116,45 +116,51 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="clearfix"></div> -->
                                 <div class="col-lg-12 text-center">
                                     <div id="success"></div>
-                                    <button id="loginButton" class="btn btn-primary btn-xl text-uppercase" type="submit" value="login">Login</button>
+                                    <button id="loginButton" class="btn btn-primary btn-xl text-uppercase" type="login" value="login">Login</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="col-lg-6" style="padding-left: 50px;">
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form action="/api/register" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="email" type="email" name="_replyto" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                                        <input class="form-control" id="firstName" type="text" name="firstName" placeholder="Your First Name *" required="required" data-validation-required-message="Please enter your email address.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="username" type="text" name="username" placeholder="Your Username *" required="required" data-validation-required-message="Please enter your username.">
+                                        <input class="form-control" id="lastName" type="text" name="lastName" placeholder="Your Last Name *" required="required" data-validation-required-message="Please enter your username.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="email" type="email" name="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="password" type="password" name="_replyto" placeholder="Your Password *" required="required"
+                                        <input class="form-control" id="password" type="password" name="password" placeholder="Your Password *" required="required"
                                             data-validation-required-message="Please enter your password.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="confirmpassword" type="confirmpassword" name="_replyto" placeholder="Confirm Your Password *"
-                                            required="required" data-validation-required-message="Please enter your password.">
+                                        <input class="form-control" id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Your Password *"
+                                            required="required" data-validation-required-message="Please confirm password.">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="checkbox">
                                             <label>
@@ -162,11 +168,11 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="clearfix"></div> -->
                                 <div class="col-lg-12 text-center">
                                     <div id="success"></div>
-                                    <button id="loginButton" class="btn btn-primary btn-xl text-uppercase" type="submit" value="login">Register</button>
+                                    <button id="registerButton" class="btn btn-primary btn-xl text-uppercase" type="register" value="login">Register</button>
                                 </div>
                             </div>
                         </form>
