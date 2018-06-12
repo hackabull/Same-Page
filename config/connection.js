@@ -8,8 +8,9 @@
  connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  port : 3333,
-  database: "tobringlist_db" 
+  port : 3306,
+  password: "",
+  database: "samepage_db" 
 });
 
 // Make connection.

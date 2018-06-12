@@ -6,7 +6,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path"); 
-var serveStatic = require('serve-static')
+var serveStatic = require('serve-static');
+var session = require('express-session');
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -15,6 +16,9 @@ var serveStatic = require('serve-static')
 
 // Tells node that we are creating an "express" server
 var app = express();
+
+var loginController = require('./controllers/loginUser_controller.js');
+var registerController = require('./controllers/registerUser_controller.js');
 
 // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
@@ -25,6 +29,12 @@ app.use(bodyParser.json());
 
 
 app.use(express.static("./public"));
+app.use(session({
+  secret: 'asdfghjkl',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {maxAge: 80000}
+}));
 
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
@@ -49,6 +59,13 @@ app.get("/messaging", function(req, res) {
 app.get("/wallet", function(req, res) {
   res.sendFile(path.join(__dirname, "public/wallet.html"));
 });
+
+app.get("/index.html", function(req, res) {
+  res.sendFile(_dirname + "/" + "index.html");
+});
+
+app.post('/api/register', registerController.register);
+app.post('/api/login', loginController.login);
 
 // ================================================================================
 // ROUTER
