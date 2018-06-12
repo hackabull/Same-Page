@@ -4,6 +4,7 @@
   "description": "This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to buy groceries together, keep a calendar, and have a shared to do list. We've got 3 pages so far with dreams of more to follow:",
   "main": "server.js",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mysql": "^2.15.0",

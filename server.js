@@ -29,15 +29,15 @@ app.use('*/images',express.static('assets/images'));
 
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
 app.get("/tobringlist", function(req, res) {
-  res.sendFile(path.join(__dirname, "tobringlist.html"));
+  res.sendFile(path.join(__dirname, "/views/tobringlist.html"));
 });
 
 app.get("/dashboard", function(req, res) {
-  res.sendFile(path.join(__dirname, "dashboard.html"));
+  res.sendFile(path.join(__dirname, "/views/dashboard.html"));
 });
 
 app.get("/calendar", function(req, res) {
