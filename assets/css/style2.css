@@ -167,7 +167,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 #dashboard {
     margin-top: -100px;
-    margin-bottom: 0;
+    padding-bottom: -1000px;
 }
 
 #dashboard .dashboard-item .dashboard-link {
