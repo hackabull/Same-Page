@@ -1,17 +1,18 @@
-DROP DATABASE samepage_db;
+DROP DATABASE IF EXISTS samepage_db;
 CREATE DATABASE samepage_db;
 use samepage_db; 
 
 
-CREATE TABLE UserInfo
+CREATE TABLE users
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar (255) NOT NULL,
-	user_name varchar (255) NOT NULL,
-	email varchar (255) NOT NULL,
-	password varchar (255),
+	first_name varchar(255) NOT NULL,
+    last_name varchar(225) NOT NULL,
+    email varchar(225) NOT NULL,
+    password varchar (225) NOT NULL,
+    adult boolean default true,
+    family_id int NOT NULL,
 	PRIMARY KEY (id)
-	
 );
 
 CREATE TABLE tobringlistitem 
