@@ -10,7 +10,7 @@
   user: "root",
   port : 3306,
   password: "",
-  database: "" 
+  database: "samepage_db" 
 });
 
 // Make connection.
