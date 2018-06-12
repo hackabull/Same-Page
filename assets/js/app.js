@@ -41,23 +41,25 @@
         scrollToAnchor('login');
     });
 
-    // init Masonry
-    // var $grid = $('.grid').masonry({
-    //     itemSelector: '.grid-item',
-    //     percentPosition: true,
-    //     columnWidth: '.grid-sizer'
-    // });
-    // layout Masonry after each image loads
-    // $grid.imagesLoaded().progress(function () {
-    //     $grid.masonry();
-    // });
-
-    $('.grid').isotope({
-        layoutMode: 'packery',
-        itemSelector: '.grid-item',
-        packery: {
-          gutter: 20
-        }
-      });
-
 })(jQuery);
+
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "250px";
+//   };
+  
+//   function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+//   };
+  
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});

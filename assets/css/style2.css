@@ -31,6 +31,7 @@ section h2.section-heading {
     background-color: #212529 !important;
     position: relative;
     padding: 0px !important;
+    /* margin-right: -120px !important; */
 }
 
 #mainNav2 .navbar-brand {
@@ -136,6 +137,48 @@ header.masthead2 .intro-text .intro-heading {
     }
   }
 
+/* #setting-gear {
+    right: 0;
+    top: 0;
+    margin-top: -20px;
+    margin-right: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
+
 /* .service-heading {
     margin: 15px 0;
     text-transform: none;
@@ -217,3 +260,76 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
         max-width: 100%;
     }
 }
+
+#dashboard .dashboard-item .dashboard-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover:hover {
+    opacity: 1;
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content i {
+    margin-top: -12px;
+  } */
+  
+  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h3,
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h4 {
+    margin: 0;
+  } */
+  
+  #dashboard .dashboard-item .dashboard-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  #dashboard .dashboard-item .dashboard-caption h4 {
+    margin: 0;
+    text-transform: none;
+  }
+  
+  #dashboard .dashboard-item .dashboard-caption p {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  #dashboard * {
+    z-index: 2;
+  }
+  
+  @media (min-width: 767px) {
+    #dashboard .dashboard-item {
+      margin: 0 0 30px;
+    }
+  }
