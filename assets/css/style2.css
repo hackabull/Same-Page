@@ -6,11 +6,6 @@ body {
     overflow-x: hidden;
 }
 
-/* .indexPage,
-body {
-    overflow: hidden;
-} */
-
 section {
     padding: 100px 0;
 }
@@ -136,11 +131,6 @@ header.masthead2 .intro-text .intro-heading {
     }
   }
 
-/* .service-heading {
-    margin: 15px 0;
-    text-transform: none;
-} */
-
 footer {
     padding: 25px 0;
     text-align: center;
@@ -175,49 +165,80 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     font-size: 17px !important;
 }
 
-/* #mast, #login {
+#dashboard {
+    margin-top: -100px;
+    padding-bottom: -1000px;
+}
+
+#dashboard .dashboard-item .dashboard-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover {
+    position: absolute;
+    width: 100%;
     height: 100%;
-} */
-
-
-* { box-sizing: border-box; }
-
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-body { font-family: sans-serif; }
-
-/* ---- grid ---- */
-
-.grid {
-  background: white;
-  margin: 100px;
-}
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-  width: 50%;
-  height: 50%;
-}
-
-.grid-item {
-  float: left !important;
-}
-
-.grid-item img {
-  display: block;
-  width: 100%;
-  padding: 5px;
-}
-
-.grid-item--width2 { width: 400px; }
-.grid-item--height2 { height: 400px; }
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover:hover {
+    opacity: 1;
+  }
+  
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content i {
+    margin-top: -12px;
+  } */
+  
+  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h3,
+  #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h4 {
+    margin: 0;
+  } */
+  
+  #dashboard .dashboard-item .dashboard-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  #dashboard .dashboard-item .dashboard-caption h4 {
+    margin: 0;
+    text-transform: none;
+  }
+  
+  #dashboard .dashboard-item .dashboard-caption p {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  #dashboard * {
+    z-index: 2;
+  }
+  
+  @media (min-width: 767px) {
+    #dashboard .dashboard-item {
+      margin: 0 0 30px;
+    }
+  }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Wallet</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <table class="table table-hover table-dark" id="wallet-table">
+            <thead>
+                <tr>
+                    <th scope="col">Transaction</th>     
+                    <th scope="col">Child</th>   
+                    <th scope="col">Date</th>   
+                    <th scope="col">I Paid</th>
+                </tr>    
+            </thead>    
+                
+            <tbody>
+                <tr>
+                    <td scope="row">Baseball Cleats</td>
+                    <td>Rory</td>
+                    <td>Date</td>
+                    <td>$60</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form id="form" role="form">
+            <div class="form-group">
+                <label for="transaction-input">Transaction</label>
+                <input type="text" class="form-control" id="transaction-name" placeholder="e.g Cleats for soccer">
+            </div>
+
+            <div class="form-group">
+                <label for="child-designation">Child</label>
+                <input type="text" class="form-control" id="child-designation" placeholder="Child Name">
+            </div>
+
+            <div class="form-group">
+                    <label for="date-inputted">Date</label>
+                    <input type="text" class="form-control" id="transaction-date" placeholder="Today's Date">
+            </div>
+
+            <div class="form-group">
+                <label for="transaction-amount">Amount Paid</label>
+                <input type="text" class="form-control" id="transaction-amount" placeholder="Amount you paid">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg"  id="add-transaction">Submit</button>
+
+        </form>
+
+    </div>
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+<script src="wallet_firebase.js"></script>
+
+</html>
