@@ -1,0 +1,20 @@
+
+#dashboard .dashboard-item .dashboard-link {
+    /* position: relative;
+    display: block; */
+    /* max-width: 400px; */
+    /* margin: 0 auto; */
+    cursor: pointer;
+}
+  
+#dashboard .dashboard-item .dashboard-link .dashboard-hover:hover {
+    opacity: 1;
+}
+
+#dashboard-footer {
+    color: #212529;
+}
+
+.text-muted {
+    font-size: 10px;
+}

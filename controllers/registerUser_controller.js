@@ -21,11 +21,7 @@ module.exports.register = function(req, res) {
                     message: 'Unable to register'
                 })
             } else {
-                res.json({
-                    status: true,
-                    data: results,
-                    message: 'User registered successfully'
-                })
+                res.redirect('/loginSuccess');
             }
         });
     })

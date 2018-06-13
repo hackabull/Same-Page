@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>To Bring List: </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+  crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/bringlistStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous">
 </head>
 <body>
 <div id="myDIV" class="header">
@@ -22,7 +27,42 @@
   <button class="clearBtn">Clear List</button>
   </div>
       
+
+  
+
 <script src="assets/js/listaction.js"></script>
 
+
 </body>
+<footer>
+  <div class="container" id="dashboard">
+    <div class="row">
+      <div class="col-md-3 col-sm-3"></div>
+      <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
+        <a class="dashboard-link" href="/calendar">
+          <i class="far fa-calendar-alt fa-2x" id="dashboard-footer"></i>
+        </a>
+        <p class="text-muted">Calendar</p>
+      </div>
+      <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
+        <a class="dashboard-link" href="/tobringlist">
+          <i class="far fa-list-alt fa-2x" id="dashboard-footer"></i>
+        </a>
+        <p class="text-muted">To-Bring</p>
+      </div>
+      <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
+        <a class="dashboard-link" href="/messaging">
+          <i class="far fa-comments fa-2x" id="dashboard-footer"></i>
+        </a>
+        <p class="text-muted">Messages</p>
+      </div>
+      <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
+        <a class="dashboard-link" href="/wallet">
+          <i class="far fa-credit-card fa-2x" id="dashboard-footer"></i>
+        </a>
+        <p class="text-muted">Wallet</p>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>

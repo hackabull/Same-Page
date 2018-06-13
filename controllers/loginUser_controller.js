@@ -6,10 +6,7 @@ module.exports.login = function(req, res) {
     var session = req.session; //Saves cookie
     connection.query('SELECT * FROM users WHERE email = ?', [email], function (error, results, fields) {
         if (error) {
-            res.json({
-                status: false,
-                message: 'Unable to login'
-            })
+            res.redirect('/loginFailed');
         } else {
             if(results.length > 0) { //Results is what it finds in the db with above query
                 if(password == results[0].password) { //Below is the information being set in the session
@@ -18,16 +15,10 @@ module.exports.login = function(req, res) {
                     session.user_id = results[0].id;
                     res.redirect('/dashboard');
                 } else { //If password on page does not match password in db.
-                    res.json({
-                        status: false,
-                        message: 'Email and password do not match'
-                    });
+                    res.redirect('/loginFailed');
                 }
             } else { //If login information does not exist
-                res.json({
-                    status: false,
-                    message: 'Email does not exist'
-                });
+                res.redirect('/loginFailed');
             }
         }
     });

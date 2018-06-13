@@ -5,156 +5,53 @@
   <meta charset='utf-8' />
   <link href='assets/calendar/fullcalendar.min.css' rel='stylesheet' />
   <link href='assets/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <link rel="stylesheet" type="text/css" href="/assets/css/calendarstyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+  <link rel="house icon" href="assets/images/houses.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
   <script src='assets/calendar/lib/moment.min.js'></script>
   <script src='assets/calendar/lib/jquery.min.js'></script>
   <script src='assets/calendar/lib/jquery-ui.min.js'></script>
   <script src='assets/calendar/fullcalendar.min.js'></script>
-  <script>
-    $(document).ready(function () {
-
-
-      /* initialize the external events
-      -----------------------------------------------------------------*/
-
-      $('#external-events .fc-event').each(function () {
-
-        // store data so the calendar knows to render an event upon drop
-        $(this).data('event', {
-          title: $.trim($(this).text()), // use the element's text as the event title
-          stick: true // maintain when user navigates (see docs on the renderEvent method)
-        });
-
-        // make the event draggable using jQuery UI
-        $(this).draggable({
-          zIndex: 999,
-          revert: true, // will cause the event to go back to its
-          revertDuration: 0 //  original position after the drag
-        });
-      });
-
-      /* initialize the calendar
-      -----------------------------------------------------------------*/
-
-      $('#calendar').fullCalendar({
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'addEventButton,month,agendaWeek,agendaDay'
-        },
-        customButtons: {
-          addEventButton: {
-            text: 'add event...',
-            click: function () {
-              var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-              var date = moment(dateStr);
-              var titleStr = prompt('Enter the title of the Event');
-
-              if (date.isValid()) {
-                $('#calendar').fullCalendar('renderEvent', {
-                  title: titleStr,
-                  start: date,
-                  allDay: true
-                });
-                alert('Great. You have added an event');
-              } else {
-                alert('Invalid date.');
-              }
-            }
-          }
-        },
-        editable: true,
-        droppable: true, // this allows things to be dropped onto the calendar
-        drop: function () {
-          // is the "remove after drop" checkbox checked?
-          if ($('#drop-remove').is(':checked')) {
-            // if so, remove the element from the "Draggable Events" list
-            $(this).remove();
-          }
-        },
-        events: [{
-            "title": "Lunch",
-            "start": "2018-06-10T12:00:00-05:00"
-          },
-          {
-            "title": "Meeting",
-            "start": "2018-06-21T14:30:00-05:00"
-          },
-          {
-            "title": "Happy Hour",
-            "start": "2018-06-30T17:30:00-05:00"
-          },
-          {
-            "title": "Dinner",
-            "start": "2018-06-15T20:00:00"
-          },
-          {
-            "title": "Birthday Party",
-            "start": "2018-06-13T07:00:00-05:00"
-          },
-        ],
-      });
-    });
-
-
-  </script>
-  <style>
-    body {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
-    }
-
-    #wrap {
-      width: 1100px;
-      margin: 0 auto;
-    }
-
-    #external-events {
-      float: left;
-      width: 150px;
-      padding: 0 10px;
-      border: 1px solid #ccc;
-      background: #eee;
-      text-align: left;
-    }
-
-    #external-events h4 {
-      font-size: 16px;
-      margin-top: 0;
-      padding-top: 1em;
-    }
-
-    #external-events .fc-event {
-      margin: 10px 0;
-      cursor: pointer;
-    }
-
-    #external-events p {
-      margin: 1.5em 0;
-      font-size: 11px;
-      color: #666;
-    }
-
-    #external-events p input {
-      margin: 0;
-      vertical-align: middle;
-    }
-
-    #calendar {
-      float: right;
-      width: 900px;
-    }
-
-    .form-control {
-      width: 95%;
-    }
-  </style>
 </head>
 
 <body>
-  <div id='wrap'>
 
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav2">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/dashboard">Same Page</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#settings">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/">Logout</a>
+          </li>
+          <li class="list-inline-item nav-item social-buttons">
+            <a href="https://github.com/hackabull/project-2" target="_blank">
+              <i class="fab fa-github nav-link js-scroll-trigger" id="octocat"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id='wrap'>
     <div id='external-events'>
       <h4>Family Events</h4>
       <div class='fc-event'>At Moms House</div>
@@ -172,6 +69,41 @@
     <div style='clear:both'></div>
 
   </div>
+
+  <footer>
+    <div class="container" id="dashboard">
+      <div class="row">
+        <div class="col-md-3 col-sm-3"></div>
+        <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
+          <a class="dashboard-link" href="/calendar">
+            <i class="far fa-calendar-alt fa-2x" id="dashboard-footer"></i>
+          </a>
+          <p class="text-muted">Calendar</p>
+        </div>
+        <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
+          <a class="dashboard-link" href="/tobringlist">
+            <i class="far fa-list-alt fa-2x" id="dashboard-footer"></i>
+          </a>
+          <p class="text-muted">To-Bring</p>
+        </div>
+        <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
+          <a class="dashboard-link" href="/messaging">
+            <i class="far fa-comments fa-2x" id="dashboard-footer"></i>
+          </a>
+          <p class="text-muted">Messages</p>
+        </div>
+        <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
+          <a class="dashboard-link" href="/wallet">
+            <i class="far fa-credit-card fa-2x" id="dashboard-footer"></i>
+          </a>
+          <p class="text-muted">Wallet</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/calendar.js"></script>
+
 </body>
 
 </html>
