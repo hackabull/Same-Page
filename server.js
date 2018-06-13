@@ -48,6 +48,14 @@ app.get("/dashboard", function(req, res) {
   res.sendFile(path.join(__dirname, "public/dashboard.html"));
 });
 
+app.get("/loginSuccess", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/login.html"));
+});
+
+app.get("/loginFailed", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/loginfailed.html"))
+});
+
 app.get("/calendar", function(req, res) {
   res.sendFile(path.join(__dirname, "public/list-views.html"));
 });
