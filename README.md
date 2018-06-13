@@ -9,18 +9,21 @@ Register as either a parent/guardian or child, if it's your first time to the si
 **Calendar** 
 A shared calendar for all parties to keep track of who's going where and when.
 
-**What-To-Bring** 
+**To-Bring** 
 A reminder list for each child as they leave the one house and head to the other house.
-
-**Virtual Wallet**
-An ongoing record of who pays for what and how much one household may owe the other.
 
 **Message Board**
 A central spot for reminders, updates, and communiation between the two households.
+
+**Wallet**
+An ongoing record of who pays for what and how much one household may owe the other.
 
 Future iterations of this app might include: 
 
 **Child-Locator**
 See where your children are at any time via their phones.
 
-# Visit [Same Page](https://calm-fortress-13062.herokuapp.com/) and have a look!
+**Updated Wallet**
+Sophisticated and secure money moving options to allow for the actual transfer of money instead of just keeping track of transactions.
+
+# Visit [Same Page](https://samepageapp.herokuapp.com/#services) and have a look!
