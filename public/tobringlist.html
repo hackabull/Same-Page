@@ -1,18 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To Bring List: </title>
+  <link rel="stylesheet" href="assets/css/bringlistStyle.css">
+</head>
+<body>
 <div id="myDIV" class="header">
-    <h2 style="margin:5px">Items to bring : </h2>
-    <input type="text" id="myInput" placeholder="Title...">
-    <span onclick="newElement()" class="addBtn">Add</span>
-    <link rel="stylesheet" type="text/css" href="assets/css/bringlistStyle.css"> 
+    <h1>My To Bring List</h2>
+    <form> 
+        <input id="item" type="text" placeholder="Add an item here...">
+        <input type="submit" class="addBtn" value="Submit">
+    </form>
 </div>
-  
-  <ul id="myUL">
-    <li>Blanket and Sleeping Bag</li>
-    <li class="checked">Pillow</li>
-    <li>Inhaler and Medicine</li>
-    <li>Cell phone charger</li>
-    <li>Backpack with school books</li>
-    <li>The Kitchen Sink</li>
-  </ul>
+  <div id="myUL">
+    <h1>Items : </h2>
+    <ul></ul>
+  <br>
+  <HR>
+  <button class="clearBtn">Clear List</button>
+  </div>
+      
+<script src="assets/js/listaction.js"></script>
 
-
-  <script src="assets/js/listaction.js"></script>
+</body>
+</html>
