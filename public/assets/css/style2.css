@@ -61,8 +61,6 @@ section h2.section-heading {
     }
     #mainNav2 .navbar-brand {
       font-size: 1.75em;
-      /* -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s; */
       transition: all 0.3s;
     }
     #mainNav2 .navbar-nav .nav-item .nav-link {
@@ -82,12 +80,6 @@ section h2.section-heading {
 header.masthead2 {
     text-align: center;
     color: black;
-    /* background-color: grey; */
-    /* background-image: url("../images/vadim-sherbakov-68-unsplash.jpg"); */
-    /* background-repeat: no-repeat; */
-    /* background-attachment: scroll; */
-    /* background-position: center center; */
-    /* background-size: cover; */
 }
 
 header.masthead2 .intro-text {
@@ -120,14 +112,12 @@ header.masthead2 .intro-text .intro-heading {
       font-style: italic;
       line-height: 40px;
       margin-bottom: 25px;
-      /* font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     }
     header.masthead2 .intro-text .intro-heading {
       font-size: 75px;
       font-weight: 700;
       line-height: 75px;
       margin-bottom: 50px;
-      /* font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     }
   }
 
@@ -203,15 +193,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     text-align: center;
     color: white;
   }
-  
-  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content i {
-    margin-top: -12px;
-  } */
-  
-  /* #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h3,
-  #dashboard .dashboard-item .dashboard-link .dashboard-hover .dashboard-hover-content h4 {
-    margin: 0;
-  } */
   
   #dashboard .dashboard-item .dashboard-caption {
     max-width: 400px;
