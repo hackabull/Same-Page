@@ -139,10 +139,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 
 #dashboard .dashboard-item .dashboard-link {
-    /* position: relative;
-    display: block; */
-    /* max-width: 400px; */
-    /* margin: 0 auto; */
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
     cursor: pointer;
 }
   
