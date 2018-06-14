@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -6,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -16,15 +19,13 @@
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/stylemessaging.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/messagingstyle.css">
+
   </head>
   <body>
 
     <div class="jumbotron">
-      <h1 class="text-center">Parent Message Board</h1>
+      <h1 class="text-center">Chirpy!</h1>
     </div>
 
     <div class="container">
@@ -34,7 +35,7 @@
           <p class="cool-font">Name</p>
           <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
           <br>
-          <p class="cool-font">Message</p>
+          <p class="cool-font">Chirp</p>
           <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Chirp Here!"></textarea>
           <button id="chirp-submit" class="btn btn-lg pull-right">Submit!</button>
         </div>
@@ -42,7 +43,7 @@
 
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Messages</h2>
+          <h2>Chirps</h2>
           <hr>
           <div id="chirp-area"></div>
         </div>
@@ -50,38 +51,8 @@
 
     </div>
 
-    <footer>
-      <div class="container" id="dashboard">
-        <div class="row">
-          <div class="col-md-3 col-sm-3"></div>
-          <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
-            <a class="dashboard-link" href="/calendar">
-              <i class="far fa-calendar-alt fa-2x" id="dashboard-footer"></i>
-            </a>
-            <p class="text-muted">Calendar</p>
-          </div>
-          <div class="col-md-2 col-sm-2 dashboard-item animated bounceInLeft text-center">
-            <a class="dashboard-link" href="/tobringlist">
-              <i class="far fa-list-alt fa-2x" id="dashboard-footer"></i>
-            </a>
-            <p class="text-muted">To-Bring</p>
-          </div>
-          <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
-            <a class="dashboard-link" href="/messaging">
-              <i class="far fa-comments fa-2x" id="dashboard-footer"></i>
-            </a>
-            <p class="text-muted">Messages</p>
-          </div>
-          <div class="col-md-2 col-sm-2 dashboard-item animated bounceInRight text-center">
-            <a class="dashboard-link" href="/wallet">
-              <i class="far fa-credit-card fa-2x" id="dashboard-footer"></i>
-            </a>
-            <p class="text-muted">Wallet</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  <script type="text/javascript" src="assets/js/message.js"></script>
+  <script type="text/javascript" src="./assets/js/message.js"></script>
   </body>
 </html>
+
+

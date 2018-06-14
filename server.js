@@ -19,7 +19,6 @@ var app = express();
 
 var loginController = require('./controllers/loginUser_controller.js');
 var registerController = require('./controllers/registerUser_controller.js');
-
 // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
 
@@ -39,6 +38,7 @@ app.use(session({
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
+
 
 app.get("/tobringlist", function(req, res) {
   res.sendFile(path.join(__dirname, "public/tobringlist.html"));
@@ -82,7 +82,7 @@ app.post('/api/login', loginController.login);
 // ================================================================================
 
 require("./config/connection.js"); 
-
+require("./controllers/message_controller.js")(app);
 // =============================================================================
 // LISTENER
 // The below code effectively "starts" our server
