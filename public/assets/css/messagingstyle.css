@@ -41,10 +41,21 @@
     font-size: 16px;
   }
   
-  #mainNav2 {
+  body {
+    height: 100%;
+    background: 
+        url(../images/joanna-kosinska-476268-unsplash.jpg)
+        no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header CSS */
+
+#mainNav2 {
     background-color: #212529 !important;
     position: relative;
     padding: 0px !important;
+    width: 100%;
 }
 
 #mainNav2 .navbar-brand {
@@ -66,6 +77,16 @@
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: white;
+}
+
+.nav-item:hover {
+    color: grey !important;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    color: grey !important;
+    transition: 0.5s;
 }
 
 @media (min-width: 992px) {
@@ -117,6 +138,37 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     background-color: grey;
 }
 
-#octocat {
-    font-size: 17px !important;
+#userImage {
+    padding-right: 50px;
+    
+}
+
+/* Message CSS */
+
+#messageTitle {
+    margin-top: 50px;
+    /* font-family: 'Homemade Apple', cursive; */
+    /* font-family: 'Fredericka the Great', cursive; */
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 45px;
+}
+
+.cool-font {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 20px;
+}
+
+.name-top {
+    margin-top: 40px;
+}
+
+#chirp-submit {
+    margin-top: 20px;
+}
+
+#chirp-submit:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(112, 145, 92);
+    transition: 0.5s;
 }
