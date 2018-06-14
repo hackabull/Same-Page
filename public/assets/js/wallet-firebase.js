@@ -20,16 +20,18 @@ $("#add-transaction").on("click", function(event) {
 
     //grab values from form input
     var transactionName = $("#transaction-name").val().trim();
-    var childDesignation = $("#child-designation").val().trim();
     var transactionDate = $("#transaction-date").val().trim();
+    var childDesignation = $("#child-designation").val().trim();
+    var transactionOwner = $("#transaction-owner").val().trim();
     var transactionAmount = $("#transaction-amount").val().trim();
 
 
     //send firebase the info
     database.ref().push({
         transactionName: transactionName,
-        childDesignation: childDesignation,
         transactionDate: transactionDate,
+        childDesignation: childDesignation,
+        transactionOwner: transactionOwner,
         transactionAmount: transactionAmount,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
@@ -51,10 +53,13 @@ database.ref().on("child_added", function(snapshot) {
     createRow.append(createCell);
 
     //create new cell once data is entered for transaction
+    createCell = $("<td></td>").append(sv.transactionDate);
+    createRow.append(createCell);
+    
     createCell = $("<td></td>").append(sv.childDesignation);
     createRow.append(createCell);
 
-    createCell = $("<td></td>").append(sv.transactionDate);
+    createCell = $("<td></td>").append(sv.transactionOwner);
     createRow.append(createCell);
 
     createCell = $("<td></td>").append(sv.transactionAmount);
