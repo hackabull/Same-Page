@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -19,31 +22,72 @@
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/messagingstyle.css">
-
+    
   </head>
   <body>
 
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav2">
+          <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/dashboard">Same Page</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/calendar">
+                    <i class="far fa-calendar-alt fa-2x"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/tobringlist">
+                    <i class="far fa-list-alt fa-2x"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/messaging">
+                    <i class="far fa-comments fa-2x"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/wallet">
+                    <i class="far fa-credit-card fa-2x"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/settings">
+                      <i class="fas fa-cogs fa-2x"></i>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
     <div class="jumbotron">
-      <h1 class="text-center">Chirpy!</h1>
+      <h1 class="text-center">Parent Message Board</h1>
     </div>
 
     <div class="container">
 
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <p class="cool-font">Name</p>
+          <p class="cool-font">Message Author :</p>
           <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
           <br>
-          <p class="cool-font">Chirp</p>
-          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Chirp Here!"></textarea>
+          <p class="cool-font">Message :</p>
+          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter message here..."></textarea>
           <button id="chirp-submit" class="btn btn-lg pull-right">Submit!</button>
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Chirps</h2>
+          <h2>Recent Messages :</h2>
           <hr>
           <div id="chirp-area"></div>
         </div>

@@ -10,7 +10,7 @@ $.get("/api/all", function(data) {
         var row = $("<div>");
         row.addClass("chirp");
   
-        row.append("<p>" + data[i].author + " chirped.. </p>");
+        row.append("<p>" + data[i].author + " wrote.. </p>");
         row.append("<p>" + data[i].body + "</p>");
         row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
   
@@ -43,7 +43,7 @@ $.get("/api/all", function(data) {
         var row = $("<div>");
         row.addClass("chirp");
   
-        row.append("<p>" + newChirp.author + " chirped: </p>");
+        row.append("<p>" + newChirp.author + " wrote: </p>");
         row.append("<p>" + newChirp.body + "</p>");
         row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
   
