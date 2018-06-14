@@ -1,54 +1,144 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Chirpy!</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Chirpy!</title>
 
-    <!-- Moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/stylemessaging.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 
-  </head>
-  <body>
 
-    <div class="jumbotron">
-      <h1 class="text-center">Parent Message Board</h1>
-    </div>
+  <link rel="house icon" href="assets/images/houses.png" type="image/x-icon">
 
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Moment.js -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" 
+  rel="stylesheet"> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">-->
+
+  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/messagingstyle.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/animate.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav2">
     <div class="container">
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="cool-font">Name</p>
-          <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
-          <br>
-          <p class="cool-font">Message</p>
-          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Chirp Here!"></textarea>
-          <button id="chirp-submit" class="btn btn-lg pull-right">Submit!</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2>Messages</h2>
-          <hr>
-          <div id="chirp-area"></div>
-        </div>
+      <a class="navbar-brand js-scroll-trigger" href="/dashboard">Same Page</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="list-views.html">
+              <i class="far fa-calendar-alt fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/tobringlist">
+              <i class="far fa-list-alt fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/messaging" style="color: grey;">
+              <i class="far fa-comments fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/wallet">
+              <i class="far fa-credit-card fa-2x"></i>
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
+    <div class="btn-group dropleft d-flex">
+      <div class="dropdown mr-1">
+        <button class="btn nav-item" id="dropdownMenuOffset" aria-haspopup="true" data-offset="50,51,51" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-expanded="false" style="color: white; background-color: #212529;">
+          <i class="fas fa-user" id="userImage"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+          <button class="dropdown-item" type="button">
+            <a href="#">
+              <i class="fa fa-user fa-fw dropdown-item"> User Profile</i>
+            </a>
+          </button>
+          <button class="dropdown-item" type="button">
+            <a href="#">
+              <i class="fas fa-cog fa-fw fa-fw dropdown-item"> Settings</i>
+            </a>
+            <div class="dropdown-divider"></div>
+          </button>
+          <button class="dropdown-item" type="button">
+            <a href="login.html">
+              <i class="fas fa-sign-out-alt fa-fw fa-fw dropdown-item"> Logout</i>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="jumbotron">
+    <h1 class="text-center">Message Board</h1>
+  </div> -->
+
+  <div class="container">
+    <h1 class="text-center" id="messageTitle">Message Board</h1>
+    <div class="row name-top">
+      <div class="col-sm-8 offset-sm-2">
+        <p class="cool-font">Name:</p>
+        <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+        <br>
+        <p class="cool-font">Message:</p>
+        <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Message Here"></textarea>
+        <button id="chirp-submit" class="btn btn-lg pull-right">Submit</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <h2 class="text-center" id="messageTitle">Messages</h2>
+        <hr>
+        <div id="chirp-area"></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
   <script type="text/javascript" src="assets/js/message.js"></script>
-  </body>
+</body>
+
 </html>
