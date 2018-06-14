@@ -1,8 +1,32 @@
 body {
-    background-color: #2b333b;
-    margin: 0;
-    min-width: 250px;
-  }
+  height: 100%;
+  background: 
+      linear-gradient(
+          rgba(3, 3, 3, 0.30),
+          rgba(3, 3, 3, 0.30)
+      ), 
+      url(../images/erwan-hesry-166245-unsplash.jpg)
+      no-repeat center center fixed;
+  background-size: cover;
+}
+
+.list {
+  background: 
+  linear-gradient(
+      rgba(3, 3, 3, 0.25),
+      rgba(3, 3, 3, 0.25)
+  );
+  padding: 30px;
+}
+
+.header {
+  background: 
+  linear-gradient(
+      rgba(3, 3, 3, 0.25),
+      rgba(3, 3, 3, 0.25)
+  );
+  margin: 20px;
+}
   
   /* Include the padding and border in an element's total width and height */
   * {
@@ -16,7 +40,7 @@ body {
   }
   
   /* Style the list items */
-  ul li {
+  .all-items {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -33,24 +57,24 @@ body {
   }
   
   /* Set all odd list items to a different color (zebra-stripes) */
-  ul li:nth-child(odd) {
+  #itemList:nth-child(odd) {
     background: #f9f9f9;
   }
   
   /* Darker background-color on hover */
-  ul li:hover {
+  .all-items:hover {
     background: #ddd;
   }
   
   /* When clicked on, add a background color and strike out text */
-  ul li.checked {
+  .all-items.checked {
     background: rgba(27, 24, 24, 0.726);
     color: #fff;
     text-decoration: line-through;
   }
   
   /* Add a "checked" mark when clicked on */
-  ul li.checked::before {
+  .all-items.checked::before {
     content: '';
     position: absolute;
     border-color: #1ea0eb;
@@ -78,7 +102,7 @@ body {
   
   /* Style the header */
   .header {
-    background-color:  #2b333b;
+    /* background-color:  #2b333b; */
     padding: 30px 40px;
     color: white;
     font-weight: bold;
@@ -120,3 +144,75 @@ body {
     color: white
   }
  
+  /* Header CSS */
+
+#mainNav2 {
+  background-color: #212529 !important;
+  position: relative;
+  padding: 0px !important;
+  width: 100%;
+}
+
+#mainNav2 .navbar-brand {
+  color: white;
+}
+
+#mainNav2 .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+}
+
+#mainNav2 .navbar-nav .nav-item .nav-link {
+  font-size: 90%;
+  font-weight: 400;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.nav-item:hover {
+  color: grey !important;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: grey !important;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  #mainNav2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #mainNav2 .navbar-brand {
+    font-size: 1.75em;
+    transition: all 0.3s;
+  }
+  #mainNav2 .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #mainNav2.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+  }
+  #mainNav2.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+    padding: 12px 0;
+  }
+}
+
+#userImage {
+  padding-right: 50px;
+  
+}

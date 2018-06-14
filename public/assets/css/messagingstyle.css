@@ -1,0 +1,93 @@
+/* Header CSS */
+
+#mainNav2 {
+    background-color: #212529 !important;
+    position: relative;
+    padding: 0px !important;
+    width: 100%;
+}
+
+#mainNav2 .navbar-brand {
+    color: white;
+}
+
+#mainNav2 .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+}
+
+#mainNav2 .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.nav-item:hover {
+    color: grey !important;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    color: grey !important;
+    transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+    #mainNav2 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+      -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+      border: none;
+      background-color: transparent;
+    }
+    #mainNav2 .navbar-brand {
+      font-size: 1.75em;
+      transition: all 0.3s;
+    }
+    #mainNav2 .navbar-nav .nav-item .nav-link {
+      padding: 1.1em 1em !important;
+    }
+    #mainNav2.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #212529;
+    }
+    #mainNav2.navbar-shrink .navbar-brand {
+      font-size: 1.25em;
+      padding: 12px 0;
+    }
+}
+
+ul.social-buttons {
+    margin-bottom: 0 !important;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    color: white !important;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: grey;
+}
+
+#userImage {
+    padding-right: 50px;
+    
+}

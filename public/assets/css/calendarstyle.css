@@ -121,51 +121,8 @@ body {
     }
 }
 
-ul.social-buttons {
-    margin-bottom: 0 !important;
-}
-
-ul.social-buttons li a {
-    font-size: 20px;
-    line-height: 40px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    transition: all 0.3s;
-    color: white !important;
-    border-radius: 100%;
-    outline: none;
-    background-color: #212529;
-}
-
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: grey;
-}
-
 #userImage {
     padding-right: 50px;
     
 }
 
-/* Footer icons CSS */
-
-
-#dashboard .dashboard-item .dashboard-link {
-    position: relative;
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-  
-#dashboard .dashboard-item .dashboard-link .dashboard-hover:hover {
-    opacity: 1;
-}
-
-#dashboard-footer {
-    color: #212529;
-}
-
-.text-muted {
-    font-size: 10px;
-}
