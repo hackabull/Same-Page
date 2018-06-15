@@ -213,6 +213,46 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     margin: 0;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
+
+  .calendar-caption:link {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  .calendar-caption:hover {
+    color: rgb(255, 109, 153) !important;
+    transition: 0.5s;
+  }
+
+  .tobring-caption:link {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  .tobring-caption:hover {
+    color: #1ea0eb !important;
+    transition: 0.5s;
+  }
+
+  .message-caption:link {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  .message-caption:hover {
+    color: rgb(112, 145, 92) !important;
+    transition: 0.5s;
+  }
+
+  .wallet-caption:link {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  .wallet-caption:hover {
+    color: rgb(255, 147, 74) !important;
+    transition: 0.5s;
+  }
   
   #dashboard * {
     z-index: 2;

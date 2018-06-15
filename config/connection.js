@@ -9,7 +9,7 @@ connection = mysql.createConnection({
 host: "localhost",
 user: "root",
 port : 3306,
-password: "",
+password: "Ba!l3y0227",
 database: "samepage_db" 
 });
 

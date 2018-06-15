@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+    <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Same Page</title>
@@ -28,7 +29,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav2">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/dashboard">Same Page</a>
+            <a class="navbar-brand js-scroll-trigger" href="/dashboard">S<i class="fas fa-home fa-1x"></i>me P<i class="fas fa-home fa-1x"></i>ge</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -61,12 +62,15 @@
                             <i class="far fa-calendar-alt fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="assets/images/rawpixel-579264-unsplash.jpg" alt="">
+                    <img class="img-fluid" src="assets/images/rawpixel-579264-unsplash.jpg" style="height: 250px !important; width: 600px !important;"
+                        alt="">
                 </a>
-                <div class="dashboard-caption">
-                    <h4>Calendar</h4>
-                    <p class="text-muted">PlaceHolder</p>
-                </div>
+                <a class="calendar-caption" href="/calendar">
+                    <div class="dashboard-caption">
+                        <h4>Calendar</h4>
+                        <p class="text-muted">Shared calendar for all users.</p>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4 col-sm-4 dashboard-item animated fadeInRight">
                 <a class="dashboard-link" href="/tobringlist">
@@ -75,12 +79,15 @@
                             <i class="far fa-list-alt fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="assets/images/rawpixel-559745-unsplash.jpg" alt="">
+                    <img class="img-fluid" src="assets/images/rawpixel-559745-unsplash.jpg" style="height: 250px !important; width: 600px !important;"
+                        alt="">
                 </a>
+                <a class="tobring-caption" href="/calendar">
                 <div class="dashboard-caption">
                     <h4>To-Bring</h4>
-                    <p class="text-muted">PlaceHolder</p>
+                    <p class="text-muted">Reminder list for each child.</p>
                 </div>
+                </a>
             </div>
             <div class="col-md-2 col-sm-2"></div>
             <div class="col-md-2 col-sm-2"></div>
@@ -91,12 +98,15 @@
                             <i class="far fa-comments fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="assets/images/rawpixel-617391-unsplash.jpg" alt="">
+                    <img class="img-fluid" src="assets/images/rawpixel-617391-unsplash.jpg" style="height: 250px !important; width: 600px !important;"
+                        alt="">
                 </a>
+                <a class="message-caption" href="/calendar">
                 <div class="dashboard-caption">
                     <h4>Message Board</h4>
-                    <p class="text-muted">PlaceHolder</p>
+                    <p class="text-muted">Central spot for communication.</p>
                 </div>
+                </a>
             </div>
             <div class="col-md-4 col-sm-4 dashboard-item animated fadeInUp">
                 <a class="dashboard-link" href="/wallet">
@@ -105,20 +115,26 @@
                             <i class="far fa-credit-card fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="assets/images/rawpixel-570907-unsplash.jpg" alt="">
+                    <img class="img-fluid" src="assets/images/rawpixel-570907-unsplash.jpg" style="height: 250px !important; width: 600px !important;"
+                        alt="">
                 </a>
+                <a class="wallet-caption" href="/calendar">
                 <div class="dashboard-caption">
                     <h4>Wallet</h4>
-                    <p class="text-muted">PlaceHolder</p>
+                    <p class="text-muted">Ongoing record of payments.</p>
                 </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- <script src="assets/js/app.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 </body>
 
