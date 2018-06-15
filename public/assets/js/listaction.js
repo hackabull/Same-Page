@@ -1,55 +1,76 @@
+let htmlList = document.querySelector("ol#list");
+let addButton = document.querySelector("button#add");
+let input = document.querySelector("input#new");
 
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+function getLocalStorage(){
+  return JSON.parse(localStorage.getItem("ToDo") || "[]");
+}
+function setLocalStorage(list){
+  return localStorage.setItem("ToDo", JSON.stringify(list));
+}
+function deleteMe(event){
+  event.stopPropagation();
+  let htmlListItem = this.parentNode;
+  const indexToDelete = htmlListItem.className;
+  htmlListItem.remove();
+  let list = getLocalStorage();
+  list.splice(indexToDelete, 1);
+  setLocalStorage(list);
+}
+function checkMe(event){
+  event.stopPropagation();
+  const indexToCheck = this.parentNode.className;
+  let list = getLocalStorage();
+  list[indexToCheck].checked = this.checked;
+  setLocalStorage(list);
+}
+function appendList(task, index){
+  /* create list item */
+  let li = document.createElement("li");
+  li.className = index;
+  htmlList.appendChild(li);
+
+  /* create checkbox */
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.id = `checkbox-${index}`;
+  checkbox.checked = task.checked?'checked':'';
+  li.appendChild(checkbox);
+  
+  let label = document.createElement("label");
+  label.className = "content";
+  label.htmlFor = `checkbox-${index}`
+  label.innerText = task.body;
+  li.appendChild(label);
+
+  /* create delete button */
+  let deleteButton = document.createElement("span");
+  deleteButton.className = "delete";
+  deleteButton.innerText = "✕";
+  li.appendChild(deleteButton);
+
+  /* addEventListener */
+  deleteButton.addEventListener("click", deleteMe);
+  checkbox.addEventListener("change", checkMe);
+}
+function readTasks(){
+  list.innerHTML="";
+  let todo = getLocalStorage();
+  todo.forEach((task, index) => {
+appendList(task, index);
+  });
 }
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
+readTasks();
+function addTask(event){
+  event.stopPropagation();
+  let list = getLocalStorage();
+  const newTask = {
+checked: false,
+body: input.value
+  };
+  list.push(newTask);
+  setLocalStorage(list);
+  appendList(newTask);
 }
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
+addButton.addEventListener("click", addTask);
