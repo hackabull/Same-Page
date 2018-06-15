@@ -98,6 +98,7 @@ body {
         rgba(3, 3, 3, 0.65)
     );
     color: white;
+    margin-bottom: 40px;
 }
 
 #table-head {
@@ -109,7 +110,8 @@ body {
 }
 
 #add-transaction {
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .form-group {
