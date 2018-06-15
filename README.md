@@ -1,29 +1,35 @@
 # Same Page
-_Team Hack-A-Bull: 4 folks learning to code in Durham, NC_
+https://samepageapp.herokuapp.com/
+
+Created by _Team Hack-A-Bull_, a group of baby hackers from Durham, North Carolina trying to make the world a better place.
 
 This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to buy groceries together, keep a calendar, and have a shared to do list. We've got 4 pages so far with dreams of more to follow: 
 
-**Sign-In/Registration Page --> Dashboard**
-Register as either a parent/guardian or child, if it's your first time to the site, then head on to the Dashboard.
+### Sign-In/Registration Page --> Dashboard
+Register as either a parent/guardian and assign user IDs to additional parents/guardians and children. 
 
-**Calendar** 
+### Calendar
 A shared calendar for all parties to keep track of who's going where and when.
 
-**To-Bring** 
-A reminder list for each child as they leave the one house and head to the other house.
+### To-Bring
+A reminder list of items to bring for each child as they leave the one house and head to the other house.
 
-**Message Board**
+### Message Board
 A central spot for reminders, updates, and communiation between the two households.
 
-**Wallet**
+### Wallet
 An ongoing record of who pays for what and how much one household may owe the other.
 
-Future iterations of this app might include: 
+Future iterations of this app might include:
 
-**Child-Locator**
-See where your children are at any time via their phones.
+_**Application Widgets**_ Choose from a selection of additional features and personalize your dashboard.
 
-**Updated Wallet**
-Sophisticated and secure money moving options to allow for the actual transfer of money instead of just keeping track of transactions.
+_**Comprehensive User Profiles**_ When each adult user views their profile page, they see the other adults paired with their profile, along with children.
 
-# Visit [Same Page](https://samepageapp.herokuapp.com/#services) and have a look!
+_**Social Media Photo Share**_ A spot for one household to drop pictures and memories from their adventures for the other household to download and/or use.
+
+_**Gift Hub**_ Keep track of who is getting what for Christmas, birthdays, holidays or brainstorm gift ideas for the future. 
+
+_**Child-Locator**_ See where your children are at any time via their phones.
+
+_**Sophisticated Wallet**_ Secure money moving options to allow for the actual transfer of money instead of just keeping track of transactions.  Track expenses by household and have monthly comparison totals stored.
