@@ -4,7 +4,7 @@ var config = {
     authDomain: "same-page-virtual-wallet.firebaseapp.com",
     databaseURL: "https://same-page-virtual-wallet.firebaseio.com",
     projectId: "same-page-virtual-wallet",
-    storageBucket: "",
+    storageBucket: "same-page-virtual-wallet.appspot.com",
     messagingSenderId: "642257501077"
   };
   firebase.initializeApp(config);
@@ -35,10 +35,12 @@ $("#add-transaction").on("click", function(event) {
         transactionAmount: transactionAmount,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+
+    //clear data from form
+    $("#form").trigger("reset");
 });
 
-//clear data from form
-$("form").trigger("reset");
+
 
 //get info back from firebase and display it on the page
 
