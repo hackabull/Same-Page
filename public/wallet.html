@@ -84,6 +84,49 @@
 
     <div class="container">
 
+        <form id="form" role="form">
+            <div class="form-row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="transaction-input">Transaction Name ex Soccer Cleats</label>
+                        <input type="text" class="form-control" id="transaction-name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="date-inputted">MM/DD/YY</label>
+                        <input type="text" class="form-control" id="transaction-date" placeholder="">
+                        </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="child-designation">Which Child?</label>
+                        <input type="text" class="form-control" id="child-designation" placeholder="">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="transaction-owner">Who Paid?</label>
+                        <input type="text" class="form-control" id="transaction-owner" placeholder="">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="transaction-amount">Total Amount?</label>
+                        <input type="text" class="form-control" id="transaction-amount" placeholder="">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="text-center">
+            <button type="submit" class="btn btn-outline-light btn-lg" id="add-transaction">Submit</button>
+            </div>
+        </form>
+
         <table class="table table-hover table-light" id="wallet-table">
             <thead>
                 <tr id="table-head">
@@ -106,56 +149,7 @@
             </tbody>
         </table>
 
-        <form id="form" role="form">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group">
-                        <label for="transaction-input"></label>
-                        <input type="text" class="form-control" id="transaction-name" placeholder="Transaction Name ex Soccer Cleats">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group">
-                        <label for="date-inputted"></label>
-                        <input type="text" class="form-control" id="transaction-date" placeholder="Today's Date">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group">
-                        <label for="child-designation"></label>
-                        <input type="text" class="form-control" id="child-designation" placeholder="For which child was this transaction?">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group">
-                        <label for="transaction-owner"></label>
-                        <input type="text" class="form-control" id="transaction-owner" placeholder="Which household paid?">
-                    </div>
-                </div>
-            </div>
-           
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group">
-                        <label for="transaction-amount">Total Amount?</label>
-                        <input type="text" class="form-control" id="transaction-amount" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button type="submit" class="btn btn-outline-light btn-lg" id="add-transaction">Submit</button>
-            </div>
-        </form>
+        
 
     </div>
 
