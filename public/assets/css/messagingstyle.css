@@ -6,6 +6,17 @@ body {
     background-size: cover;
 }
 
+.chirp {
+ 
+    border: 2px solid #dedede;
+    border-color: #ccc;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+
+  }
+
 /* Header CSS */
 
 #mainNav2 {
