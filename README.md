@@ -1,8 +1,6 @@
 # Same Page
 https://samepageapp.herokuapp.com/
 
-Created by _Team Hack-A-Bull_, a group of baby hackers from Durham, North Carolina trying to make the world a better place.
-
 This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to track money, keep a calendar, and have a shared to do list. We've got 4 pages so far with dreams of more to follow: 
 
 ### Sign-In/Registration Page --> Dashboard
@@ -33,3 +31,5 @@ _**Gift Hub**_ Keep track of who is getting what for Christmas, birthdays, holid
 _**Child-Locator**_ See where your children are at any time via their phones.
 
 _**Sophisticated Wallet**_ Secure money moving options to allow for the actual transfer of money instead of just keeping track of transactions.  Track expenses by household and have monthly comparison totals stored.
+
+Created by _Team Hack-A-Bull_, a group of baby hackers from Durham, North Carolina trying to make the world a better place.
