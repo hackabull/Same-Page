@@ -1,7 +1,15 @@
 # Same Page
 https://samepageapp.herokuapp.com/
 
-This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to track money, keep a calendar, and have a shared to do list. We've got 4 pages so far with dreams of more to follow: 
+This app is aimed at blended families (two households, where the kids move back and forth between parents or guardians), but could probably be used by any group of people trying to track money, keep a calendar, and have a shared to do list. 
+
+## To get started
+To see the entire log-in process, register a user profile.
+Or, log-in using: 
+### email _hackabulldurham@gmail.com_ 
+### password _samepage_
+
+We've got 4 pages so far with dreams of more to follow: 
 
 ### Sign-In/Registration Page --> Dashboard
 Register as either a parent/guardian and assign user IDs to additional parents/guardians and children. 
